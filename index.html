@@ -1,0 +1,760 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Возможно ли сделать успешное фитнес приложение в наши дни</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+
+.video-block {
+  width: 100%;
+  max-width: 900px;
+  margin: 32px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #e5e7eb inset;
+}
+.video-block .player { position: relative; padding-top: 56.25%; }
+.video-block iframe {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0; border-radius: 12px;
+}
+</style></head><body><article id="b01b0cdd-a451-49e4-b4c1-452bca05b0db" class="page sans"><header><img class="page-cover-image" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286669_(1).png" style="object-position:center 64.05000000000001%"/><h1 class="page-title">Возможно ли сделать успешное фитнес приложение в наши дни</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-created_by"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/user-circle_gray.svg" style="width:14px;height:14px;display:block"/></span>Created by</th><td><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">П</span></span>Полина Татаринская</span></td></tr></tbody></table></header><div class="page-body"><h1 id="e3d6f982-07bc-466c-be59-d35aeb967b82" class="">О проекте</h1><figure id="12521e1f-bc58-451d-87e9-dd8d982c121d">
+<div class="video-block">
+  <div class="player">
+    <iframe src="https://player.vimeo.com/video/967532855"
+      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+    </iframe>
+  </div>
+</div></figure><p id="18fb3a41-0656-80f7-b0ba-ecdbe1ff7c51" class="">
+</p><p id="b70a0a50-731b-4a47-b5ed-4e0753c55d21" class="">
+</p><p id="a7edd40c-3964-47d3-be74-13d464f09445" class="">В наше время количество фитнес-приложений растёт изо дня в день. Так, в период с 2016 по 2018 рост скачиваний онлайн фитнес-приложений вырос на 22%. Количество пользователей в 2020, в 2021 году превысило 400 млн. человек, а в 2022 году уже составило 650 млн.<br/>Интересна статистика по онлайн-приложениям:</p><ul id="422354d4-0901-47fd-a0aa-5c92f107f0f1" class="bulleted-list"><li style="list-style-type:disc">к концу 2023 года мировой доход от приложений для фитнеса достигнет 6 млрд. долларов, а к 2028 году - 2028 млрд. долларов;<br/>июль 2022 года пришлось<br/>наибольшее количество скачиваний приложений - 656 млн. раз, при этом 150 млн. скачиваний приходились на приложения для здоровья;</li></ul><ul id="50e90be3-4bc4-4ecc-8c18-7db796a2b0ef" class="bulleted-list"><li style="list-style-type:disc">в пандемию 2019-2022 годов около<br/>40% пользователей хотя бы раз скачали фитнес-приложение;</li></ul><ul id="b70cff1d-8c21-4b6a-adf9-e4e6abcc1891" class="bulleted-list"><li style="list-style-type:disc">из 84 миллионов активных пользователей в 2022 году лишь 22% - те, кто пользовался приложением до пандемии;</li></ul><ul id="ada66de4-10d5-441d-8613-53bf0255371b" class="bulleted-list"><li style="list-style-type:disc">по итогам 2022 года число пользователей, открывающих приложение ежедневно увеличилось на 24%</li></ul><figure id="d95c39e8-0f21-48af-8760-afb8da10f9fd" class="image"><a href="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/%25D0%25A1%25D0%25BD%25D0%25B8%25D0%25BC%25D0%25BE%25D0%25BA_%25D1%258D%25D0%25BA%25D1%2580%25D0%25B0%25D0%25BD%25D0%25B0_(502)_1.png"><img style="width:576px" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/%25D0%25A1%25D0%25BD%25D0%25B8%25D0%25BC%25D0%25BE%25D0%25BA_%25D1%258D%25D0%25BA%25D1%2580%25D0%25B0%25D0%25BD%25D0%25B0_(502)_1.png"/></a><figcaption>На рисунке представлен обзор наиболее распространенных приложений для фитнеса в России.</figcaption></figure><p id="96fca0d2-162b-4740-8e5b-df5d098eb549" class="block-color-default">Ссылка на исследование <a href="https://cyberleninka.ru/article/n/aktualnost-onlayn-fitnes-prilozheniy-v-rossii/viewer">https://cyberleninka.ru/article/n/aktualnost-onlayn-fitnes-prilozheniy-v-rossii/viewer</a></p><h1 id="5ec80b5a-01ee-4108-8255-45577a800d26" class=""><mark class="highlight-teal_background">Train Track</mark> - это приложение для легкого и доступного поиска спортивных программ, занятий и секций</h1><figure id="fc034cb0-0d1f-4820-bdae-ebfebdfbbb35" class="image"><a href="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286670_(1).png"><img style="width:1008px" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286670_(1).png"/></a></figure><h1 id="ef230807-affa-4afb-ba31-1d57f7fbddd5" class="">Команда и роли</h1><p id="768e9b65-b2df-4709-a5e5-c19989593061" class="">В рамках этого кейса я участвовала в таких аспектах разработки продукта как: </p><ul id="31b705f1-8366-4ca5-949b-5f00eab2732b" class="bulleted-list"><li style="list-style-type:disc">Проведение интервью</li></ul><ul id="639e5601-2071-4c9a-aff1-10b464692907" class="bulleted-list"><li style="list-style-type:disc">Составление гипотез </li></ul><ul id="9a1f90ac-e65d-4517-aff1-28c860588450" class="bulleted-list"><li style="list-style-type:disc">Проектирование интерфейсов </li></ul><ul id="536a6046-c812-428f-9c3d-773d3cdf7cc6" class="bulleted-list"><li style="list-style-type:disc">UX тесты</li></ul><ul id="02056bc4-c023-46b6-932d-c3a587447a0c" class="bulleted-list"><li style="list-style-type:disc">Разработка визуального дизайна</li></ul><p id="b25462cd-22fa-4478-924a-ba3c732073ea" class=""> </p><h1 id="b836641c-1ce6-488e-8e3d-0220bd16c122" class="">Бенчмаркинг</h1><p id="72404bb7-48aa-4131-b791-bdcfdc35e087" class="">Я начала с поиска конкурентов, определила основные вопросы и что буду искать</p><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Вопросы исследования </summary><div class="indented"><ul id="0178c569-7c7a-4630-b67b-a8172ea17b4f" class="bulleted-list"><li style="list-style-type:disc">Кто является нашими основными конкурентами?</li></ul><ul id="8ac43418-a292-4dda-bee5-0e8d19f4a058" class="bulleted-list"><li style="list-style-type:disc">Какой функционал на рынке является базовым, а какой станет преимуществом для нас?</li></ul><ul id="b551fd0e-3be9-436c-af8b-9aa1c5b08418" class="bulleted-list"><li style="list-style-type:disc">Каковы наши позиции относительно конкурентов?</li></ul></div></details><p id="586827ee-3696-474c-8ee6-031b2fc594c7" class="">Я собрала скринфлоу всех прямых и косвенных сервисов конкурентов и сравнила их между собой. Туда вошли как русскоязычные сервисы, так и зарубежные</p><figure id="a4067e94-b96d-464a-8bd4-3ccd53e5ed70" class="image"><a href="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/%25D0%25A1%25D0%25BD%25D0%25B8%25D0%25BC%25D0%25BE%25D0%25BA_%25D1%258D%25D0%25BA%25D1%2580%25D0%25B0%25D0%25BD%25D0%25B0_(505).png"><img style="width:1008px" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/%25D0%25A1%25D0%25BD%25D0%25B8%25D0%25BC%25D0%25BE%25D0%25BA_%25D1%258D%25D0%25BA%25D1%2580%25D0%25B0%25D0%25BD%25D0%25B0_(505).png"/></a></figure><p id="d7b0548a-0e17-4b6f-976a-3fef6065ebb1" class="">После этого я составила сравнительную таблицу по функционалу, разделив его на 3 группы: базовые, расширенные и уникальные функции</p><h1 id="b41ad821-5399-4e8c-9edb-13da1624c277" class="">Обзор функционала</h1><p id="4aad89e6-58cc-4724-9795-0236c07140bb" class="">
+</p><figure id="505d23a8-818b-4191-b0b4-887d26c3791e" class="image" style="text-align:center"><a href="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286672.png"><img style="width:1008px" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286672.png"/></a></figure><p id="c4e585a3-2445-4ccd-a954-964b9f1b50c2" class="">Далее я ответила вопрос: зависит ли стоимость услуг сервиса от объема функционала? </p><h1 id="f9118a9f-da74-4a11-a430-11eba4fc938d" class="">Прогнозируемые позиции TrainTrack</h1><p id="28079cdd-7589-4550-8639-30a49367cf45" class="">
+</p><figure id="687966c3-e7d6-4b37-bf91-46281d58a013" class="image"><a href="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/222222222222222222222.png"><img style="width:1008px" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/222222222222222222222.png"/></a></figure><h1 id="f100fc99-8e84-4c98-b04f-d9e7937f71c3" class="">Проведение интервью с респондентами</h1><h3 id="d20a5dde-c3a6-4bda-bd94-3002e328d8a1" class="">Цель интервью: </h3><p id="de363e4e-33e2-466c-bf5d-996beb3e5218" class="">Узнать путь пользователя в выборе студий, секций, кружков. Как сейчас пользователь использует приложения конкурентов, что ему в них нравится, а что не нравится</p><h3 id="ec7bc880-5978-4649-b028-f13ad4a6f40d" class="">ЦА для интервью:</h3><p id="1576a666-b56e-4c41-a355-b6128fab50c3" class="">Люди от 18 до 50 лет, которые любят активный образ жизни и следят за своим здоровьем, уже пробовали заниматься самостоятельно дома или ходили на секции, кружки, фитнес залы и так далее</p><h3 id="bd8a5cac-054e-41d6-95fd-ca0457b468a3" class="">Поиск респондентов:</h3><p id="f21498db-05ff-4849-859a-179c43bfd615" class="">Я нашла группы про спорт и здоровье в интернете, выставила объявление о прохождении интервью, задала квалифицирующие вопросы и набрала 10 респондентов </p><p id="6bc7467c-ed5f-4e15-a67c-281d1125e1d8" class="">
+</p><p id="89e3e3ba-eb19-4f11-95d4-f748e163fa9a" class=""><strong>Я сформулировала гипотезы и придумала вопросы, с помощью которых буду их проверять</strong></p><div id="70110a23-a400-4b7d-9bd5-f5dad4676088" class="column-list"><div id="8ee05db3-027a-49b9-afb0-89ae763c6a32" style="width:50%" class="column"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Гипотезы</summary><div class="indented"><ul id="13d127bb-935e-49d4-891a-853a54387345" class="bulleted-list"><li style="list-style-type:disc">Пользователю важно посетить бесплатное пробное занятие</li></ul><ul id="91fb91aa-3245-4296-9551-ff13db6bbad7" class="bulleted-list"><li style="list-style-type:disc">Пользователю важно записаться на занятие онлайн</li></ul><ul id="621f1cf3-03b5-4a4a-ba1f-b7cd29d75119" class="bulleted-list"><li style="list-style-type:disc">Пользователю будет удобно оплачивать занятия разными способами </li></ul><ul id="6902b938-1312-4a2f-944d-b2512e5c38d1" class="bulleted-list"><li style="list-style-type:disc">Пользователю было бы важно связаться со специалистом для решения его вопросов </li></ul><ul id="8e0236e7-15aa-44f4-82ce-a71b304e3889" class="bulleted-list"><li style="list-style-type:disc">Пользователю было бы важно знать информацию о занятии</li></ul><ul id="d7094e1f-a647-4cd1-9476-d72afc1871e0" class="bulleted-list"><li style="list-style-type:disc">Пользователю было бы важно знать опыт тренера ,его образование и пол</li></ul><ul id="929c8135-c950-4a5a-b078-5658cd8e2cd3" class="bulleted-list"><li style="list-style-type:disc">Пользователю было бы важно узнавать о новых занятиях, мероприятиях, событиях, акциях и тд из пуш уведомлений  </li></ul><ul id="b31c44cb-1a16-4006-b29d-bae325ff50e6" class="bulleted-list"><li style="list-style-type:disc"> Пользователь будет опираться на 3 главных критерия( время, место и цена) при выборе спортивной активности</li></ul><ul id="cc6fe8d1-d4f0-4e18-b7c0-4f7c9c7ee63a" class="bulleted-list"><li style="list-style-type:disc">Пользователь будет опираться на отзывы и оценки людей при выборе занятия</li></ul><p id="edb1be67-f763-4037-a64b-a173bef34a48" class="">
+</p><h3 id="d9dd8de7-b1d2-4e99-9d2c-460369657dc7" class="">Результат:</h3><p id="4503c7d8-0e2c-4214-852a-722b01cc9c87" class="">Я собрала таблицу с ответами респондентов</p><figure id="9e22e531-1ec5-43f6-b6f5-f1d5b5f568da" class="image"><a href="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/photo_5458602777371597183_y.jpg"><img style="width:960px" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/photo_5458602777371597183_y.jpg"/></a></figure><figure id="30803b7f-917c-424c-9466-3c4882e13cd1" class="image"><a href="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286676.png"><img style="width:528px" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286676.png"/></a></figure></div></details></div><div id="3d96cd8c-6c6c-44b0-abfe-56e3b638a7b9" style="width:50.000000000000014%" class="column"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Вопросы</summary><div class="indented"><ul id="9875e005-5e78-48e9-92c4-ef11b8d3032e" class="bulleted-list"><li style="list-style-type:disc">По каким критериям вы выбираете себе секции, кружки и любые спортивные активности? на что вы опираетесь?</li></ul><ul id="2f149cff-030d-4bfd-bdd1-bb400e12ffb0" class="bulleted-list"><li style="list-style-type:disc">Какими способами вы пользуетесь для выбора   спортивных активностей? Приложения, сайты и тд</li></ul><ul id="a83cee20-d0fb-4e91-be8f-92de31f43bcc" class="bulleted-list"><li style="list-style-type:disc">Что вам в них нравится и не нравится?</li></ul><ul id="13db4dd7-27af-4ddc-b41f-782e6309f3f4" class="bulleted-list"><li style="list-style-type:disc">Что бы вы хотели изменить или улучшить в этих приложениях? </li></ul><ul id="b1ea6b73-f4e2-44ee-9edc-c33f07851bc2" class="bulleted-list"><li style="list-style-type:disc"> Почему перестали пользоваться некоторыми приложениями?</li></ul><ul id="6ffbf4d3-b394-4cc7-9eef-49057f3a7613" class="bulleted-list"><li style="list-style-type:disc">Какие трудности у вас возникали при запись на спортивную активность?</li></ul><ul id="7dd306a3-da39-4428-b155-ecc91eed47a4" class="bulleted-list"><li style="list-style-type:disc">Обращались ли вы в поддержу сервиса? Почему?</li></ul><ul id="50014bff-a7b6-484d-8c2c-5ec3e88b3584" class="bulleted-list"><li style="list-style-type:disc">Часто ли у вас возникали проблемы с приложением?</li></ul><ul id="f6d626fb-2cd4-4dce-9a7f-3dd03acb63fd" class="bulleted-list"><li style="list-style-type:disc">Был ли у вас опыт посещения пробного занятия ? Понравилось или нет, расскажите подробнее, что для вас было важно?</li></ul><ul id="59727f67-b996-4da0-89a8-99ea9d55173e" class="bulleted-list"><li style="list-style-type:disc">Какими способами оплаты вы пользовались в этих приложениях?</li></ul><ul id="edc69898-ee47-4dc9-9065-edc8a15ec47e" class="bulleted-list"><li style="list-style-type:disc">Для вас бы было важно узнавать о новых акциях, скидках, занятиях и тд?</li></ul><ul id="94060b64-b7f6-4431-805a-50f2155033d0" class="bulleted-list"><li style="list-style-type:disc">На какие критерии вы смотрите при выборе занятия в сервисе?</li></ul></div></details></div></div><h1 id="23606f1c-b5a9-4c23-8412-2a07408b7a80" class="">CJM и ИА (Информационная архитектура)  </h1><p id="83a0784d-fb91-48f4-986d-5750bd0e99ae" class="">После анализа интервью я обработала полученные ответы, выписала инсайты и приступила к построению CJM и ИА. В них я учитывала: действия пользователя, точки контакта с продуктом, проблемы, с которыми может столкнуться пользователь и возможные решения </p><figure id="f196a5cc-4b3c-4a67-9090-b54df7c2fb67" class="image"><a href="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/%25D0%25BB%25D0%25BB%25D0%25BB.png"><img style="width:864px" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/%25D0%25BB%25D0%25BB%25D0%25BB.png"/></a></figure><figure id="91f3c043-dedf-4f3a-9ab1-4063c7e2655d" class="image"><a href="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/%25D0%25B4%25D0%25B4%25D0%25B4%25D0%25B4.png"><img style="width:864px" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/%25D0%25B4%25D0%25B4%25D0%25B4%25D0%25B4.png"/></a></figure><p id="b4e5811e-7fe5-4697-a9fa-12446dc3deef" class="">
+</p><p id="8ae29038-1046-4369-b072-70e3da90990f" class="">Далее заказчик рассказал какой функционал он хотел бы видеть в своем приложение и мы обсудили это с разработчиками. Сначала хотели сделать встроенную геолокацию и виджет с онлайн занятиями, однако потом решили их пока не добавлять из-за дороговизны</p><h3 id="f4b601d7-b384-42bc-b67e-c47665474bf1" class="">Вайрфреймы</h3><figure id="447ec830-bcd1-42c0-a9b6-bc4737baee7e" class="image"><a href="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286681.png"><img style="width:720px" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286681.png"/></a></figure><p id="282e8c5a-1e34-427c-bc5a-747c5448fa41" class="">
+</p><h1 id="aba7cad9-50f8-4bb4-9103-5a09965e0ce1" class="">Первые макеты</h1><figure id="0e1f3c1f-b21d-4a45-a4d8-eecfb17bb8a7">
+<div class="video-block">
+  <div class="player">
+    <iframe src="https://player.vimeo.com/video/967524849"
+      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+    </iframe>
+  </div>
+</div></figure><p id="1e4e5edc-7bc3-4f7f-9f71-b2a6853f0bfe" class="">Нарисовала первые версии макетов, финальные получили изменения после общения с разработчиками и UX-тестов, крупно покажу их в конце кейса</p><figure id="254f413b-defc-49fb-a062-06e5200cae82" class="image"><a href="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286693.png"><img style="width:960px" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286693.png"/></a></figure><p id="4876049f-d829-4864-921c-87ae276bd155" class="">
+</p><h1 id="30dadb3d-6cfe-4d75-9f1b-98cfade83fc5" class="">Ревью с разработчиками</h1><p id="b2bb24b7-d763-4a57-9daf-c0c7fc16cc07" class="">Макеты мы обсудили с разработчиками и решили что:</p><ul id="dadf1e3c-97b8-4168-9f73-94637c045971" class="bulleted-list"><li style="list-style-type:disc">Регистрацию нужно сделать более упрощенной</li></ul><ul id="d81f8108-28a2-43d2-9fb2-ba0b64e51eac" class="bulleted-list"><li style="list-style-type:disc">Сократим количество экранов онбординга для более высокой конверсии</li></ul><ul id="4e4d1bec-c7e6-4521-a385-d51189054647" class="bulleted-list"><li style="list-style-type:disc">Выберем более свободный дизайн</li></ul><ul id="f744afb3-f32d-4443-9037-ff2e4aeda415" class="bulleted-list"><li style="list-style-type:disc">Увеличим кнопки для большей кликабельности</li></ul><ul id="4fa71c1e-ab67-4374-bd36-f6f7708a047e" class="bulleted-list"><li style="list-style-type:disc">Уберем тени, чтобы был более чистый дизайн</li></ul><ul id="03230c4d-799d-4150-95d0-e505bf0d7240" class="bulleted-list"><li style="list-style-type:disc">Изменим карточку занятий, чтобы она не сливалась с фильтрами </li></ul><p id="a3efa324-863e-4827-80e3-3e43812c1235" class="">Также мы добавили состояния:</p><ul id="f1dd3c9a-164e-4c0b-a9df-fcba58a7a4a0" class="bulleted-list"><li style="list-style-type:disc">Полей ввода в личном кабинете</li></ul><ul id="b1ed2a87-4364-4d9b-ad96-5944e410f5d9" class="bulleted-list"><li style="list-style-type:disc">Состояния фильтров при выборе студии</li></ul><figure id="84717802-0ada-4d1f-ae04-73c3aebbf12a" class="image"><a href="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286694.png"><img style="width:672px" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286694.png"/></a></figure><p id="decf3f81-f5be-4378-a06a-02bfe26cb8aa" class="">
+</p><h1 id="45f234ba-8581-49b2-8c42-8c38938d8cd2" class="">Проведен UX-тест с 13 респондентами</h1><div id="03b8d2c1-7d83-47cd-842c-f9062c5eaa45" class="column-list"><div id="54030b40-b94f-40d3-9d49-21c253d838e4" style="width:50%" class="column"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Гипотезы:</summary><div class="indented"><ul id="4c157735-ac5a-4bc2-bb8e-132a86b7b5ef" class="bulleted-list"><li style="list-style-type:disc">Пользователь поймет, где и как найти избранное</li></ul><ul id="352515f3-f3db-49c9-b7fd-18796bdc0d23" class="bulleted-list"><li style="list-style-type:disc">Пользователь поймет как применить фильтры в карточке студии</li></ul><ul id="fc8a96fe-1107-4966-af64-b9236710b632" class="bulleted-list"><li style="list-style-type:disc">Пользователь поймет что можно найти его данные, нажав на настройки</li></ul><ul id="c9328231-1352-43e7-a61b-be86ad8213e9" class="bulleted-list"><li style="list-style-type:disc">Пользователь поймет как можно изменить свои данные в личном кабинете</li></ul><ul id="b0935c78-8cf7-4175-a09e-4bad02217747" class="bulleted-list"><li style="list-style-type:disc">Пользователь поймет что на главной странице баннер кликабельный</li></ul><ul id="a32d72e7-e623-455f-86d7-a0fdc23394fb" class="bulleted-list"><li style="list-style-type:disc">Пользователь поймет как записаться на занятие</li></ul><p id="a6829e66-1fb7-44c4-bd66-41977de091d1" class="">
+</p><p id="e3f8ff84-cc97-4222-b42a-1a68fc5fe982" class="">
+</p><p id="ddd7eb7d-54db-4dd0-b1cc-a66dc57d4227" class="">
+</p></div></details></div><div id="6a2ad74a-e2e4-4fcb-9229-5eb9008981bc" style="width:50.000000000000014%" class="column"><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Вопросы</summary><div class="indented"><ul id="f174c6ff-ba94-40ba-bea6-522a57c6f361" class="bulleted-list"><li style="list-style-type:disc"> Представьте, что вы хотите пойти на йогу в студию, куда ходили прошлый раз, однако вы забыли ее название, но точно помните, что она добавлена в ваше избранное, что вы будете делать?</li></ul><ul id="95994934-7965-4fc5-8efd-6c7d87273d04" class="bulleted-list"><li style="list-style-type:disc">Представьте, что вам друзья посоветовали студию растяжки Bon Ton и вы хотите записаться на статическую растяжку в 16:00 и желательно к тренеру мужчине, что вы будете делать?</li></ul><ul id="bdb7006d-ae7b-4d2f-98d5-78e1a41f8b09" class="bulleted-list"><li style="list-style-type:disc">Представьте, что вы неправильно указали свою дату рождения и вам надо ее поменять, чтобы получить подарок от приложения, что вы будете делать?</li></ul><ul id="e6d00fbd-7547-4287-a9e2-1cfdf3ab8d8f" class="bulleted-list"><li style="list-style-type:disc">Представьте, что вы решили заняться теннисом и хотите  найти хороший корт, что вы будете делать?</li></ul><ul id="da6cfdfa-a8d5-4d2d-b323-f3535a324c75" class="bulleted-list"><li style="list-style-type:disc"> Представьте, что вы решили записаться на занятие растяжки на все тело на 9 часов утра что вы будете это делать?</li></ul></div></details></div></div><figure id="66983966-8818-4509-be61-a1319cfca112" class="image"><a href="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_15.png"><img style="width:672px" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_15.png"/></a></figure><figure id="8168e2dc-d2a4-45ba-a69f-eb37dbd210d0" class="image"><a href="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/%25D0%25A1%25D0%25BD%25D0%25B8%25D0%25BC%25D0%25BE%25D0%25BA_%25D1%258D%25D0%25BA%25D1%2580%25D0%25B0%25D0%25BD%25D0%25B0_(527)_1.png"><img style="width:624px" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/%25D0%25A1%25D0%25BD%25D0%25B8%25D0%25BC%25D0%25BE%25D0%25BA_%25D1%258D%25D0%25BA%25D1%2580%25D0%25B0%25D0%25BD%25D0%25B0_(527)_1.png"/></a></figure><p id="f3534319-dd01-4074-a7bb-7df39b5d8df4" class="">
+</p><h2 id="acf6cab7-925f-4dbd-903b-f187007860ba" class="">На UX-тестах выяснилось что:</h2><figure id="c9df3538-1251-43e6-bb75-951a9bfc2c7a" class="image"><a href="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286695.png"><img style="width:707.9971313476562px" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286695.png"/></a></figure><figure id="edfaf344-fead-4448-9d8b-f3d8aa1808bd" class="image"><a href="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286695%201.png"><img style="width:708px" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286695%201.png"/></a></figure><h1 id="c8bcdb10-8695-44f1-a059-95a69e9ebaf8" class="">Финальные макеты</h1><figure id="61fbc8aa-aa9c-43e7-9f48-d2877a89a950" class="image"><a href="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Free_Iphone_13_Pro_Mockup_5_%25D0%25BA%25D0%25BE%25D0%25BF%25D0%25B8%25D1%258F.jpg"><img style="width:1056px" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Free_Iphone_13_Pro_Mockup_5_%25D0%25BA%25D0%25BE%25D0%25BF%25D0%25B8%25D1%258F.jpg"/></a></figure><p id="b36ec3c1-202a-4d44-83eb-0e32285181ac" class="">
+</p><figure id="a0f1fb75-fe6d-41d1-b87d-3201c22f0c41" class="image"><a href="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286698.png"><img style="width:912px" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286698.png"/></a></figure><h1 id="a1b08d2b-fa75-455c-8181-92c3ba2ea08e" class="">Полный UserFlow пользователя</h1><p id="85809ab2-a7ce-4dad-a8d4-3f54ac64cfee" class="">
+</p><figure id="2a8e8494-59aa-4b0e-aa9c-198ebaf25cb5">
+<div class="video-block">
+  <div class="player">
+    <iframe src="https://player.vimeo.com/video/925813021"
+      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+    </iframe>
+  </div>
+</div></figure><p id="994561f8-b65b-4506-816d-efe56d071e66" class="">
+</p><h1 id="ae6daa89-8eae-4f1d-b2ed-4857aa96e7ec" class="">Подготовка макетов</h1><figure id="0b7acdb5-9be4-4928-a837-c0e53475000a" class="image"><a href="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286699.png"><img style="width:1008px" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286699.png"/></a></figure><div id="8763d3ef-9c63-4d89-be0a-7b22fa81f5be" class="column-list"><div id="6013e1b7-28be-41c8-9281-6d0a3dfedf06" style="width:50%" class="column"><h2 id="2ffffc5f-5947-4eb8-bd00-450eca9a3a75" class=""><mark class="highlight-pink"><strong><a href="https://t.me/ANILOP22">Написать мне в тг</a></strong></mark></h2></div><div id="6e7e9a3b-9a15-483f-9084-37b6c8ee71c1" style="width:50%" class="column"><h2 id="cf36c36e-752a-422e-891a-88018d81cfea" class=""><mark class="highlight-pink"><a href="https://www.notion.so/9365f883fd674533a37baffd987aa990?pvs=21">Посмотреть мое резюме и портфолио</a></mark></h2></div></div><figure id="b44769b4-9d23-414e-a126-9f9b1bbdd9c6" class="image"><a href="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286700.png"><img style="width:960px" src="%D0%92%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%BB%D0%B8%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D0%BE%D0%B5%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BD%20b01b0cdda45149e4b4c1452bca05b0db/Group_149286700.png"/></a></figure><p id="0b34a87a-9b4d-4764-8f55-87a385dfb0b2" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
